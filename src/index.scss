@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+@import '~animate.css/animate.min.css';
+
+// https://github.com/daneden/animate.css/issues/596
+.animated {
+  -webkit-animation-fill-mode: none !important;
+  animation-fill-mode: none !important;
+}
+
+// must be placed before importing bootstrap
+@import './styles/variables';
+@import '~bootstrap/scss/bootstrap';
+@import './styles/commons';
+@import './styles/forms';
+@import './styles/fonts';
+@import './styles/branding';
+@import './styles/animations';
+
+//@import '~bulma/sass/utilities/initial-variables.sass';
+//
+//// your customization as described in the Bulma docs
+//
+//@import '~bulma/bulma.sass';
+
+//html {
+//font-size: 14px;
+//}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+body {
+  //overflow: auto;
+  //height: 100%;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(179.31deg, #ffffff 0%, #f8f5ff 97.11%);
+}

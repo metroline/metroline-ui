@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+
+.button {
+  border: none;
+  border-radius: $border-radius;
+  position: relative;
+  color: $white;
+  padding: 0 25px;
+  height: 40px;
+  line-height: 100%;
+  text-transform: uppercase;
+
+  transition: box-shadow $transition-duration linear, color $transition-duration linear;
+
+  &:hover {
+    box-shadow: $box-shadow;
+    color: $white;
+  }
+}
+
+.gitlab {
+  background: linear-gradient(251.46deg, #fca326 0%, #e24329 100%);
+}
+
+.gitea {
+  background: linear-gradient(222.08deg, #ccf7a1 0%, #73bd28 100%), #ffffff;
+}
+
+.github {
+  background: linear-gradient(250.75deg, #4d4d4d 0%, #000000 100%);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  opacity: 0.15;
+  z-index: 0;
+}

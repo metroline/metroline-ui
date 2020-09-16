@@ -1,0 +1,36 @@
+@import '../../styles/variables';
+
+:global {
+  .node {
+    cursor: pointer;
+
+    transition: all 0.1s linear;
+
+    &:hover {
+      opacity: 0.5;
+      fill: $_silverGradient;
+    }
+  }
+
+  .line {
+    stroke: $_glitter;
+    fill: none;
+
+    &:hover {
+      //stroke: red;
+      //cursor: pointer;
+    }
+  }
+
+  .pipeline-job-label {
+    color: $dark;
+    font-weight: bold;
+  }
+
+  .pipeline-job-icon {
+    fill: white;
+    stroke: white;
+    stroke-width: 0;
+    cursor: pointer;
+  }
+}

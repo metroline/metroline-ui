@@ -1,0 +1,31 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.loader {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.branch-container {
+  &:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+}
+
+.branch {
+  //background: $_silverGradient;
+  border: 2px solid $_blueBell;
+  padding: $list-group-item-padding-y $list-group-item-padding-x;
+  border-radius: $list-group-border-radius;
+  cursor: pointer;
+  font-size: 1rem;
+
+  transition: box-shadow $transition-duration $transition-effect, border $transition-duration $transition-effect;
+
+  &:hover {
+    box-shadow: $_boxShadow;
+    border-color: transparent;
+  }
+}

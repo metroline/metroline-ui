@@ -1,0 +1,43 @@
+@import 'variables';
+
+@font-face {
+  font-family: Graphik;
+  src: url('/assets/fonts/Graphik-Bold.ttf') format('truetype');
+  font-weight: $font-weight-bolder;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: Graphik;
+  src: url('/assets/fonts/Graphik-Semibold.ttf') format('truetype');
+  font-weight: $font-weight-bold;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: Graphik;
+  src: url('/assets/fonts/Graphik-Medium.ttf') format('truetype');
+  font-weight: $font-weight-normal;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: Graphik;
+  src: url('/assets/fonts/Graphik-Regular.ttf') format('truetype');
+  font-weight: $font-weight-light;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: 'Oxygen Mono';
+  src: url('/assets/fonts/OxygenMono-Regular.ttf') format('truetype');
+  font-weight: $font-weight-normal;
+  font-size: 14px;
+}
+
+@font-face {
+  font-family: OCR A Extended;
+  src: url('/assets/fonts/ocraext.ttf') format('truetype');
+  font-weight: $font-weight-normal;
+  font-size: 14px;
+}

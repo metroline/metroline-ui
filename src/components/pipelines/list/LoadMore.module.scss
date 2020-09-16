@@ -1,0 +1,21 @@
+@import '../../../styles/variables';
+
+.button {
+  border: 2px solid $_blueBell;
+  border-radius: 50px;
+  background: none;
+  padding: 0.5rem 2rem;
+  color: $_blueBell;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  transition: border-color $transition-duration $transition-effect, color $transition-duration $transition-effect;
+
+  &:hover {
+    border-color: $dark;
+    color: $dark;
+  }
+}

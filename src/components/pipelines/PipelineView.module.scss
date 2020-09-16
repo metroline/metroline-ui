@@ -1,0 +1,9 @@
+@import '../../styles/variables';
+
+.jobs {
+  display: flex;
+  flex-direction: column;
+  // this is important for flex children not to expand outside the parent width
+  flex: 1;
+  min-width: 0;
+}

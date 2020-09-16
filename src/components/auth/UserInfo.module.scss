@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+
+.info {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(225deg, #ff7f66 0%, #661aff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110%;
+}
+
+.name {
+  position: relative;
+  bottom: -1px;
+}

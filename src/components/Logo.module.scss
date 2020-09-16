@@ -1,0 +1,9 @@
+@import '../styles/variables';
+
+.logo {
+  width: 35px;
+
+  path {
+    fill: $white;
+  }
+}

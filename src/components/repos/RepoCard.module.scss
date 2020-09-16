@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+
+.repo {
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  //border: 2px solid #EEECF9;
+  text-transform: none;
+  color: $dark;
+  background: $_silverGradient;
+  box-shadow: $_boxShadow;
+
+  transition: transform $transition-duration $transition-effect;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.commit {
+  margin-left: 46px;
+}

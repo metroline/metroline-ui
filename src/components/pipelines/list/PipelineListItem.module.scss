@@ -1,0 +1,59 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+
+  .line {
+    transition: background $transition-duration $transition-effect;
+  }
+
+  &:hover {
+    .line {
+      background: $_royalPurple;
+    }
+  }
+}
+
+.time {
+  width: 140px;
+  color: $text-muted;
+  text-align: right;
+  font-size: 0.8rem;
+  padding-top: 12px;
+}
+
+.body {
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  position: relative;
+  min-width: 0;
+}
+
+.commit {
+  padding-left: 45px;
+  line-height: 100%;
+}
+
+.line {
+  height: 100%;
+  width: 6px;
+  position: absolute;
+  top: 0;
+  left: 28px;
+  z-index: -1;
+  background: $_glitter;
+}
+
+.status-and-message-container {
+  min-width: 0;
+}
+
+.commit-message {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 250px;
+}

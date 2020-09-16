@@ -1,0 +1,12 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.pages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page {
+  margin: 0 auto;
+}

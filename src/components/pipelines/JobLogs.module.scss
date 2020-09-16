@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.wrapper {
+  overflow: auto;
+}
+
+.logs {
+  background: $_middlePurple;
+  color: $light;
+  font-family: 'Oxygen Mono', monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 0 0 5px 5px;
+  padding: 20px 30px;
+  line-height: 130%;
+  display: table;
+  width: 100%;
+}

@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+
+.pipeline {
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background: $_silverGradient;
+  box-shadow: $_boxShadow;
+}
+
+.commit {
+  padding-left: 45px;
+}
+
+.status {
+  min-width: 0;
+  padding-right: 10px;
+}
+
+.commit-message {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

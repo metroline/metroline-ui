@@ -1,0 +1,42 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.loader {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparentize($dark, 0.1);
+}
+
+.container {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  color: $light;
+}
+
+:global {
+  .repo-search-modal-overlay {
+    background: transparent;
+  }
+
+  *[data-blur='true'] {
+    //@include blur(8px);
+  }
+}
