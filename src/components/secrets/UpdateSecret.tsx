@@ -116,7 +116,6 @@ export function UpdateSecret({ secret, onUpdated }: { secret: Secret; onUpdated:
           secret={secret}
           onUpdated={updatedSecret => {
             closeModal();
-            console.log(updatedSecret);
             onUpdated(updatedSecret);
           }}
         />
