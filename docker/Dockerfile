@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:12-alpine AS build
 
 COPY ./ /repo/
 
@@ -19,7 +19,7 @@ RUN apk --no-cache add \
     nodejs \
   && chmod +x /docker-entrypoint.sh /env.js
 
-COPY --from=0 /repo/build /www
+COPY --from=build /repo/build /www
 
 LABEL maintainer="metroline.io"
 
