@@ -5,7 +5,7 @@ COPY ./ /repo/
 WORKDIR /repo
 
 RUN apk add --no-cache git \
-  && npm install \
+  && npm ci \
   && npm run build
 
 FROM nginx:1.17-alpine
