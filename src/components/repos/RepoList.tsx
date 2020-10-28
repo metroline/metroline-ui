@@ -58,16 +58,24 @@ export function RepoList() {
     });
   };
 
+  const emptyList = (
+    <EmptyList
+      icon={<RepoIcon />}
+      title="No repos"
+      subTitle={user ? 'Did you sync ?' : 'Sign in to view your repos'}
+    />
+  );
+
   return (
     <>
       {pages.length === 0 && loading && <Loader />}
       {pages.length === 0 ? (
-        <>No repos</>
+        emptyList
       ) : (
         pages.map(({ items }, index) => (
           <div className="mt-4" key={index}>
             {items.length === 0 ? (
-              <EmptyList icon={<RepoIcon />} title="No repos" subTitle={user ? 'Did you sync ?' : 'Sign in to view your repos'} />
+              emptyList
             ) : (
               items.map(({ repo, latestPipeline }) => (
                 <Link to={`/repos/${repo._id}`} className="mt-3 d-block" key={repo._id}>
