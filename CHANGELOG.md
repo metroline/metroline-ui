@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/metroline/metroline-ui/compare/v1.0.1...v1.0.2) (2020-10-29)
+
+
+### Bug Fixes
+
+* add description of the app to index.html ([#2](https://github.com/metroline/metroline-ui/issues/2)) ([bb04940](https://github.com/metroline/metroline-ui/commit/bb04940fc7c682dfce0f28ccf6de2cbbb1297f87))
+
 ## [1.0.1](https://github.com/metroline/metroline-ui/compare/v1.0.0...v1.0.1) (2020-09-16)
 
 
