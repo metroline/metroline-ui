@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/metroline/metroline-ui/compare/v1.0.2...v1.1.0) (2020-10-30)
+
+
+### Bug Fixes
+
+* wrong license link ([b487778](https://github.com/metroline/metroline-ui/commit/b4877782c63b5981e057561aa2ed57f8e2d9b309))
+
+
+### Features
+
+* allow viewing repo public key ([046e14d](https://github.com/metroline/metroline-ui/commit/046e14ded87d5d8056dcd38ff10c5afa6162a473))
+
 ## [1.0.2](https://github.com/metroline/metroline-ui/compare/v1.0.1...v1.0.2) (2020-10-29)
 
 
