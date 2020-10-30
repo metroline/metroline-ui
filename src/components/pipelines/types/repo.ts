@@ -7,8 +7,8 @@ export interface Repo {
   url: string;
   lastUpdate?: Date;
   isSetup: boolean;
+  publicKey?: string;
   status?: PipelineStatus;
-
   permissions?: {
     pull: boolean;
     push: boolean;

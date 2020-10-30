@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Switch, useParams, useRouteMatch } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import moment from 'moment';
-import { faCog, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faExternalLinkAlt, faKey } from '@fortawesome/free-solid-svg-icons';
 import { axios } from '../../providers/axios';
 import { useEnv } from '../../providers/EnvProvider';
 import { Loader } from '../../commons/components/Loader';
@@ -22,6 +22,7 @@ import { PipelineView } from '../pipelines/PipelineView';
 import { Repo } from '../pipelines/types/repo';
 import { PipelineIcon } from '../icons/PipelineIcon';
 import { SecretIcon } from '../icons/SecretIcon';
+import { PublicKey } from './PublicKey';
 
 export function RepoView() {
   const { repoId } = useParams();
@@ -88,6 +89,13 @@ export function RepoView() {
                   <DropdownLink to={`${url}/secrets`} icon={<SecretIcon />}>
                     Secrets
                   </DropdownLink>
+                  {repo.publicKey && (
+                    <PublicKey publicKey={repo.publicKey}>
+                      <DropdownLink to={`${url}/secrets`} icon={<FontAwesomeIcon icon={faKey} />}>
+                        Public key
+                      </DropdownLink>
+                    </PublicKey>
+                  )}
                   <DropdownSeparator />
                   <DisableRepo repoId={repoId} />
                 </>
