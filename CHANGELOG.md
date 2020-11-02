@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/metroline/metroline-ui/compare/v1.1.0...v1.1.1) (2020-11-02)
+
+
+### Bug Fixes
+
+* hide cancel pipeline button to anonymous ([#8](https://github.com/metroline/metroline-ui/issues/8)) ([0169a37](https://github.com/metroline/metroline-ui/commit/0169a37057e3165dbcddf32fac3293d149d68968))
+
 # [1.1.0](https://github.com/metroline/metroline-ui/compare/v1.0.2...v1.1.0) (2020-10-30)
 
 
