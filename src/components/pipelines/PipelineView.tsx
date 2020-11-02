@@ -95,7 +95,14 @@ export function PipelineView() {
           <FontAwesomeIcon icon={faLongArrowAltLeft} className="mr-2" />
           Pipelines
         </Link>
-        <div>{!cancelledAt && !end && <CancelPipeline pipelineId={pipelineId} onCancelled={setCancelledAt} />}</div>
+        <div>
+          {!cancelledAt && !end && (
+            <CancelPipeline
+              pipelineId={pipelineId}
+              onCancelled={setCancelledAt}
+            />
+          )}
+        </div>
       </div>
       <div className="mt-4">
         <PipelineCard pipeline={pipeline} raised />

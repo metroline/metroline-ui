@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { Route, Switch, useParams, useRouteMatch } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import moment from 'moment';
@@ -23,6 +23,10 @@ import { Repo } from '../pipelines/types/repo';
 import { PipelineIcon } from '../icons/PipelineIcon';
 import { SecretIcon } from '../icons/SecretIcon';
 import { PublicKey } from './PublicKey';
+
+const RepoContext = createContext<Repo>(undefined);
+
+export const useRepo = () => useContext(RepoContext);
 
 export function RepoView() {
   const { repoId } = useParams();
@@ -105,20 +109,22 @@ export function RepoView() {
         )}
       </SubHeader>
       <div className="mb-5">
-        {isSetup ? (
-          <>
-            <Switch>
-              <Route path={[path, `${path}/pipelines`]} exact component={PipelineList} />
-              <Route path={`${path}/pipelines/:pipelineId`} exact component={PipelineView} />
-              {repo.permissions?.admin && <Route path={`${path}/secrets`} exact component={SecretList} />}
-              <Route component={NotFound} />
-            </Switch>
-          </>
-        ) : (
-          <>
-            <SetupRepo repoId={repoId} permissions={repo.permissions} onSetup={onSetup} />
-          </>
-        )}
+        <RepoContext.Provider value={repo}>
+          {isSetup ? (
+            <>
+              <Switch>
+                <Route path={[path, `${path}/pipelines`]} exact component={PipelineList} />
+                <Route path={`${path}/pipelines/:pipelineId`} exact component={PipelineView} />
+                {repo.permissions?.admin && <Route path={`${path}/secrets`} exact component={SecretList} />}
+                <Route component={NotFound} />
+              </Switch>
+            </>
+          ) : (
+            <>
+              <SetupRepo repoId={repoId} permissions={repo.permissions} onSetup={onSetup} />
+            </>
+          )}
+        </RepoContext.Provider>
       </div>
     </>
   );

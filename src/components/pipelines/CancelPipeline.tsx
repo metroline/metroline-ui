@@ -4,8 +4,10 @@ import { Button } from '../../commons/components/Button';
 import { useEnv } from '../../providers/EnvProvider';
 import { axios } from '../../providers/axios';
 import { extractExrrorMessage } from '../../utils/extract-exrror-message';
+import { useRepo } from '../repos/RepoView';
 
 export function CancelPipeline({ pipelineId, onCancelled }: { pipelineId: string; onCancelled: (date: Date) => void }) {
+  const repo = useRepo();
   const env = useEnv();
   const [loading, setLoading] = useState(false);
 
@@ -23,8 +25,12 @@ export function CancelPipeline({ pipelineId, onCancelled }: { pipelineId: string
   };
 
   return (
-    <Button type="button" onClick={cancelPipeline} loading={loading}>
-      Cancel
-    </Button>
+    repo && repo.permissions?.push ? (
+      <Button type="button" onClick={cancelPipeline} loading={loading}>
+        Cancel
+      </Button>
+    ) : (
+      <></>
+    )
   );
 }
