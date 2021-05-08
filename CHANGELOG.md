@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/metroline/metroline-ui/compare/v1.1.1...v1.1.2) (2021-05-08)
+
+
+### Bug Fixes
+
+* font size reduction in pipeline consoles ([#5](https://github.com/metroline/metroline-ui/issues/5)) ([b743a7f](https://github.com/metroline/metroline-ui/commit/b743a7fa883043c5af95592bd54cfd26b6ff05bd))
+
 ## [1.1.1](https://github.com/metroline/metroline-ui/compare/v1.1.0...v1.1.1) (2020-11-02)
 
 
